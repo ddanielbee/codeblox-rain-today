@@ -9,5 +9,6 @@
     "precipitation"
   ],
   "input": "location",
-  "output": "boolean"
+  "output": "boolean",
+  "repository": "https://github.com/moigonzalez/codeblox-rain-today.git"
 }
