@@ -1,6 +1,6 @@
 {
   "name": "rain-today",
-  "version": "1.0.0",
+  "version": "2.1.0",
   "description": "Returns true if it will rain today",
   "directions": "",
   "keywords": [
@@ -8,7 +8,6 @@
     "weather",
     "precipitation"
   ],
-  "input": "location",
   "output": "boolean",
   "repository": "https://github.com/moigonzalez/codeblox-rain-today.git"
 }
