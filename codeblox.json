@@ -1,0 +1,13 @@
+{
+  "name": "rain-today",
+  "version": "1.0.0",
+  "description": "Returns true if it will rain today",
+  "directions": "",
+  "keywords": [
+    "rain",
+    "weather",
+    "precipitation"
+  ],
+  "input": "location",
+  "output": "boolean"
+}
