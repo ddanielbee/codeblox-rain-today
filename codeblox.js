@@ -1,13 +1,11 @@
 var request = require('request')
 
 module.exports.default = (event, context, callback) => {
-	console.log(event)
-	console.log(process.env.WEATHER_API_KEY);
-  request.get(`http://api.openweathermap.org/data/2.5/forecast?appid=${process.env.WEATHER_API_KEY}&lat=${event.input[0]}&lon=${event.input[1]}`, (err, res, body) => {
+  request.get(`http://api.openweathermap.org/data/2.5/forecast?appid=${process.env.WEATHER_API_KEY}&lat=${process.env.CITY_LAT}&lon=${process.env.CITY_LON}`, (err, res, body) => {
     const weather = JSON.parse(body)
-    console.log(weather)
+    const weatherToday = weather.list[0];
 
-    // let rain = weather.hourly.data.find(d => d.precipProbability >= 0.5 && d.precipType === 'rain')
-    // callback(null, Boolean(rain))
+    let rain = weatherToday.rain.length > 0
+    callback(null, Boolean(rain))
   })
 }
